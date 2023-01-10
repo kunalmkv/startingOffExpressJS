@@ -1,0 +1,83 @@
+.main-header__item-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+main {
+    padding: 1rem;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.main-header__item {
+    margin: 0 1rem;
+    padding: 0;
+}
+
+.main-header {
+    width: 100%;
+    height: 3.5rem;
+    background-color: rgb(210, 255, 7);
+    padding: 0 1.5rem;
+}
+
+.main-header__item a {
+    text-decoration: none;
+    color: rgba(238, 6, 45, 0.897);
+
+}
+
+.main-header__item a:hover,
+.main-header__item a:active,
+.main-header__item a.active {
+    color: rgb(77, 4, 247);
+}
+
+.form-control label,
+.form-control input {
+    display: block;
+    width: 100%;
+}
+
+.form-control {
+    margin: 1rem 0;
+}
+
+.form-control input {
+    border: 1px solid rgb(7, 7, 0);
+    font: inherit;
+    border-radius: 2px;
+}
+
+button {
+    font: inherit;
+    border: 1px solid black;
+    background: white;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button:hover,
+button:active {
+    background-color: purple;
+    color: aliceblue;
+
+}
+
+.main-header_nav {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.product-form {
+    width: 20rem;
+    max-width: 100%;
+    margin: auto;
+}
