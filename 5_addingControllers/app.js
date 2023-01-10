@@ -14,7 +14,6 @@ app.use(successRoutes);
 app.use(shopRoutes);
 app.use(contactroutes);
 
-
 app.use('/', (req, res, next) => {
     res.status(404).sendFile(path.join(__dirname, 'views', '404.html'));
 })
