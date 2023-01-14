@@ -1,16 +1,1 @@
-[
-    {
-        "id": "23243242",
-        "title": "A Book",
-        "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmZtYY8tQctwAgC-w5dK8wWa3uxAlA5dw0fg&usqp=CAU",
-        "description": "This is an awesome book!",
-        "price": "19"
-    },
-    {
-        "title": "nike shoes",
-        "imageUrl": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/e776b31d-d1f3-4e91-8b8c-3879f06a191a/air-force-1-mid-qs-shoes-Bxtdl9.png",
-        "description": "rthrtdh",
-        "price": "7888",
-        "id": "0.7810481447855135"
-    }
-]
+[{"id":"0.7810481447855135","title":" nike shoes","imageUrl":" https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/e776b31d-d1f3-4e91-8b8c-3879f06a191a/air-force-1-mid-qs-shoes-Bxtdl9.png","description":"best product from nike!!\r\n","price":"7888"}]
