@@ -1,5 +1,7 @@
 const Product = require('../models/product');
 
+
+
 exports.getAddProduct = (req, res, next) => {
   res.render('admin/edit-product', {
     pageTitle: 'Add Product',
@@ -91,6 +93,18 @@ exports.getProducts = (req, res, next) => {
     });
   }).catch(err => console.log(err));
 };
+/*exports.getProducts = (req, res, next) => {
+  Product.findAll().then(products => {
+    res.json(products);
+  }).catch(err => console.log(err));
+};*/
+/*exports.getProducts = (req, res, next) => {
+  Product.fetchAll(products => {
+    res.json({
+      data: [{ id: 1, name: 'kunal mishra' }, { id: 2, name: 'paras mishra' }]
+    })
+  })
+};*/
 exports.postDeleteProduct = (req, res, next) => {
   const prodId = req.body.productId;
   Product.findByPk(prodId).then(product => {
