@@ -5,6 +5,9 @@ const bodyParser = require('body-parser');
 
 const errorController = require('./controllers/error');
 const sequelize = require('./util/database');
+const Product = require('./models/product');
+const User = require('./models/user');
+
 
 const app = express();
 
@@ -23,14 +26,39 @@ const shopRoutes = require('./routes/shop');
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use((req, res, next) => { //req is not a normal request but a sequelised object having SQL properties
+    User.findByPk(1).then(user => {
+        req.user = user;
+        next();
+    }).catch(err => console.log(err));
+})
 app.use('/admin', adminRoutes);
 app.use(shopRoutes);
+Product.belongsTo(User, { constraints: true, onDelete: 'CASCADE' });
+User.hasMany(Product);
+
 
 app.use(errorController.get404);
-sequelize.sync().then(result => {
-    console.log(result);
-    app.listen(3000);
-})
+
+//server starts from here. Above are middleawre functions that will be executed ionly after incoming requests
+sequelize
+    //.sync({ force: true })
+    .sync()
+    .then(result => {
+        return User.findByPk(1);
+        //console.log(result);
+
+    })
+    .then(user => {
+        if (!user) {
+            return User.create({ name: 'Max', email: 'test@test.com' })
+        }
+        return user;
+    }).then(user => {
+        console.log(user);
+        app.listen(3000);
+
+    })
     .catch(err => {
         console.log(err)
     })
