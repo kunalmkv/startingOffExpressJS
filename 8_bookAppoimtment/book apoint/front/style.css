@@ -1,0 +1,39 @@
+* {
+    font-family: arial, sans-serif;
+}
+
+#form {
+    background: #f7f7f7;
+    padding: 20px;
+    max-width: 500px;
+}
+
+#form * {
+    box-sizing: border-box;
+}
+
+#form input,
+#form label {
+    display: block;
+    width: 100%;
+}
+
+#form input {
+    padding: 10px;
+}
+
+#form label {
+    padding: 10px 0;
+}
+
+#form input[type="submit"] {
+    margin-top: 20px;
+    border: 0;
+    color: #fff;
+    background: #cb1111;
+    cursor: pointer;
+}
+
+#form input[type="submit"]:disabled {
+    background: #424242;
+}
